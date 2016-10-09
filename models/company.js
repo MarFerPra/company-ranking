@@ -10,7 +10,7 @@ var CompanySchema = new Schema({
     type: Number
   },
   rated_by: {
-    type: []
+    type: [Number]
   }
   name: {
     type: String

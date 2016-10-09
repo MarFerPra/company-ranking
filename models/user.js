@@ -7,7 +7,7 @@ var UserSchema = new Schema({
     type: Number
   },
   has_rated: {
-    type: []
+    type: [Number]
   },
   name: {
     type: String
