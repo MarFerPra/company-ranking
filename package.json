@@ -1,0 +1,24 @@
+{
+  "name": "company-ranking",
+  "version": "1.0.0",
+  "description": "Simple Node js app to learn how-to work with CI and TDD.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarFerPra/company-ranking.git"
+  },
+  "author": "Marco Fernandez Pranno",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MarFerPra/company-ranking/issues"
+  },
+  "homepage": "https://github.com/MarFerPra/company-ranking#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.3"
+  }
+}
