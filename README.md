@@ -2,7 +2,7 @@
 
 **Simple Node js app to learn how-to work with CI and TDD.**
 
-#### Basic functionality:
+## Basic functionality:
 
 * Create company.
 * List company score.
