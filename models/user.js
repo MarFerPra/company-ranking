@@ -4,7 +4,10 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
   id: {
-    type: int
+    type: Number
+  },
+  has_rated: {
+    type: []
   },
   name: {
     type: String

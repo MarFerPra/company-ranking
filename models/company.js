@@ -4,8 +4,14 @@ var Schema = mongoose.Schema;
 
 var CompanySchema = new Schema({
   id: {
-    type: int
+    type: Number
   },
+  total_score: {
+    type: Number
+  },
+  rated_by: {
+    type: []
+  }
   name: {
     type: String
   },
