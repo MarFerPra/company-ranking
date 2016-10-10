@@ -4,19 +4,19 @@ var Schema = mongoose.Schema;
 
 var CompanySchema = new Schema({
   id: {
-    type: Number
+    type: Schema.Types.ObjectId
   },
-  total_score: {
-    type: Number
-  },
-  rated_by: {
-    type: [Number]
-  }
   name: {
     type: String
   },
   description: {
     type: String
+  },
+  total_score: {
+    type: Number
+  },
+  rated_by: {
+    type: [Schema.Types.ObjectId]
   }
 });
 

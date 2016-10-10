@@ -4,10 +4,10 @@ var Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
   id: {
-    type: Number
+    type: Schema.Types.ObjectId
   },
   has_rated: {
-    type: [Number]
+    type: [Schema.Types.ObjectId]
   },
   name: {
     type: String
