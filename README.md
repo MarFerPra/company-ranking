@@ -10,10 +10,10 @@
 * Delete score.
 * Display ranking based on score.
 
-## Installation
-
- >TODO: Add stuff here.
-
 ## Usage
 
->TODO: Add more stuff here.
+1. `npm install` to install dependencies
+2. `npm start` to start server
+    * `npm test` to perform the unit tests
+
+ >TODO: Add stuff here..
