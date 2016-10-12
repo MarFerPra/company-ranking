@@ -1,8 +1,22 @@
+var bodyParser = require('body-parser');
+
 var User = require('./models/user');
 var Company = require('./models/company');
 
 module.exports = function(app) {
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({
+        extended: true
+    }));
+    
+    app.get('/',function(req,res){ //This is to check that it works, remove if unwanted
+        res.json("<h1>Company Ranking API</h1>");
+    });
 
+    app.use(function(req, res, next) {
+        console.log("Middleware: Petición realizada.");
+        next(); //If you don't call next, the middleware just get stucks
+    });
 
     /* ****** User API ****** */
 
