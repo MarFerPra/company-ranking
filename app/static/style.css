@@ -1,0 +1,9 @@
+#homepage-jumbotron {
+  height: 200px;
+  background-color: rgb(3, 115, 232);
+  color: rgb(210, 210, 210);
+}
+
+#homepage-title {
+  margin-top: 0px;
+}

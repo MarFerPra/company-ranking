@@ -8,9 +8,13 @@ module.exports = function(app) {
     app.use(bodyParser.urlencoded({
         extended: true
     }));
-    
+
     app.get('/',function(req,res){ //This is to check that it works, remove if unwanted
         res.json("<h1>Company Ranking API</h1>");
+    });
+
+    app.get('/home', function(req, res){
+      res.sendFile(__dirname + '/views/home.html');
     });
 
     app.use(function(req, res, next) {
@@ -84,6 +88,7 @@ module.exports = function(app) {
             }
         });
     });
+
     app.delete('/api/users/:user_id', function(req, res) {
         if (req.params.userId) {
             User.remove({
@@ -142,6 +147,7 @@ module.exports = function(app) {
             }
         });
     })
+
     app.put('/api/companies/:company_id', function(req, res) {
         var company_id = req.params.company_id
         Company.findById(company_id, function(error, company) {

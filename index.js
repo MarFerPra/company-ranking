@@ -1,7 +1,10 @@
 var express = require('express');
+var path = require("path");
 var app = express();
 
-var routes=require('./app/routes');
+app.use(express.static("./app/dist"));
+
+var routes = require('./app/routes');
 
 routes(app);
 

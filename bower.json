@@ -1,0 +1,20 @@
+{
+  "name": "company-ranking",
+  "description": "Simple Node js app to learn how-to work with CI and TDD.",
+  "main": "index.js",
+  "authors": [
+    "Marco Fernandez Pranno"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/MarFerPra/company-ranking",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-css": "^3.3.6"
+  }
+}
