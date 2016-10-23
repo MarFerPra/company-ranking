@@ -7,15 +7,17 @@ module.exports = React.createClass({
     render: function() {
         return (
             <div>
-                <div className="row">
-                    <div className="col-md-12 centered-text">
-                        <MessagePanel/>
-                    </div>
-                    <div className="col-md-6">
-                        <ActionComponents/>
-                    </div>
-                    <div className="col-md-6">
-                        <DisplayComponents/>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 centered-text">
+                            <MessagePanel/>
+                        </div>
+                        <div className="col-md-6">
+                            <ActionComponents/>
+                        </div>
+                        <div className="col-md-6">
+                            <DisplayComponents/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -26,7 +28,7 @@ module.exports = React.createClass({
 var MessagePanel = React.createClass({
     render: function() {
         return (
-            <div>
+            <div className="text-center">
                 This is the message panel
             </div>
         )

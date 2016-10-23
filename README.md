@@ -13,7 +13,8 @@
 ## Usage
 
 1. `npm install` to install dependencies
-2. `npm start` to start server
+2. `gulp` to set up react components and static content.
+3. `npm start` to start server
     * `npm test` to perform the unit tests
 
  >TODO: Add stuff here..
