@@ -41,14 +41,18 @@ module.exports = function(app) {
         user.has_rated = null;
 
         user.save(function(error) {
-            if (error) {
-                res.send(error);
-            } else {
-                res.json({
-                    message: "User created successfully.",
-                    userId: user.id
-                });
-            }
+          if (error) {
+              res.json({
+                text: "Error creating the user.",
+                success: false
+              });
+          } else {
+              res.json({
+                  text: "User created successfully.",
+                  success: true,
+                  model: user
+              });
+          }
         });
     });
 
@@ -62,6 +66,7 @@ module.exports = function(app) {
             }
         });
     });
+
     app.put('/api/users/:user_id', function(req, res) {
         var user_id = req.params.user_id
         User.findById(user_id, function(error, user) {
@@ -117,9 +122,10 @@ module.exports = function(app) {
             }
         });
     });
+
     app.post('/api/companies', function(req, res) {
         var company = new Company();
-        company.id = new mongoose.Types.ObjectId;
+        //company.id = new mongoose.Types.ObjectId;
         company.name = req.body.name;
         company.description = req.body.description;
         company.total_score = req.body.total_score ? req.body.total_score : 0;
@@ -127,11 +133,15 @@ module.exports = function(app) {
 
         company.save(function(error) {
             if (error) {
-                res.send(error);
+                res.json({
+                  text: "Error creating the company.",
+                  success: false
+                });
             } else {
                 res.json({
-                    message: "Company created successfully.",
-                    companyId: company.id
+                    text: "Company created successfully.",
+                    success: true,
+                    model: company
                 });
             }
         });

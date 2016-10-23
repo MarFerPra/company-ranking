@@ -1,7 +1,7 @@
 var React = require("react");
-var CreateUser = require('./CreateUser.jsx');
-var CreateCompany = require('./CreateCompany.jsx');
-var VoteCompany = require('./VoteCompany.jsx');
+var CreateUser = require('./ActionComponents/CreateUser.jsx');
+var CreateCompany = require('./ActionComponents/CreateCompany.jsx');
+var VoteCompany = require('./ActionComponents/VoteCompany.jsx');
 
 module.exports = React.createClass({
 
@@ -11,19 +11,19 @@ module.exports = React.createClass({
                 <div className="panel-heading text-center">ACTIONS</div>
                 <div className="panel-body actions-wrapper">
                     <div className="row">
-                        <div className="col-md-12"><CreateUser /></div>
+                        <div className="col-md-12"><CreateUser displayMessage={this.props.displayMessage} /></div>
 
                         <div className="col-md-12">
                             <div className="horizontal-line"></div>
                         </div>
 
-                        <div className="col-md-12"><CreateCompany /></div>
+                        <div className="col-md-12"><CreateCompany displayMessage={this.props.displayMessage} /></div>
 
                         <div className="col-md-12">
                             <div className="horizontal-line"></div>
                         </div>
 
-                        <div className="col-md-12"><VoteCompany /></div>
+                        <div className="col-md-12"><VoteCompany displayMessage={this.props.displayMessage} /></div>
                     </div>
                 </div>
             </div>

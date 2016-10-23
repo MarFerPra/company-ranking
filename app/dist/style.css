@@ -1,28 +1,54 @@
 #homepage-jumbotron {
-  height: 200px;
-  background-color: rgb(3, 115, 232);
-  color: rgb(210, 210, 210);
+    height: 200px;
+    background-color: rgb(3, 115, 232);
+    color: rgb(210, 210, 210);
 }
 
 #homepage-title {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
-.form-control{
+.form-control {
     width: 50%;
 }
 
 .centered-input {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 .horizontal-line {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-color: #ddd !important;
-  border: thin solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-color: #ddd !important;
+    border: thin solid;
+}
+
+.actions-wrapper {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.message-panel {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    margin: 10px;
+}
+
+.message-text {
+    margin: 1px;
+}
+
+.success-message {
+    background-color: #b0f7b0;
+}
+
+.warning-message {
+    background-color: #f98383;
 }
