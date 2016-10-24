@@ -111,7 +111,62 @@ module.exports = function(app) {
         }
     });
 
+
     /* ****** Company API ****** */
+
+
+    app.post('/api/company/vote', function(req, res){
+
+      if(req.body.company_id && req.body.user_id && req.body.score){
+        Company.findById(req.body.company_id, function(error, company) {
+          if(error){
+            res.send({success: false, text: "Error finding the company."});
+          } else {
+            User.findById(req.body.user_id, function(error, user) {
+              if(error){
+                res.send({success: false, text: "Error finding the user."});
+              } else {
+
+                if(company.rated_by === null){
+                  company.rated_by = [];
+                }
+
+                company.rated_by.push(user._id);
+                company.total_score = parseInt(req.body.score) + parseInt(company.total_score);
+
+                if(user.has_rated === null){
+                  user.has_rated = [];
+                }
+
+                user.has_rated.push(company._id);
+
+                var saved_company = true;
+                company.save(function(error) {
+                  if (error)
+                    saved_company = false;
+                });
+
+                var saved_user = true;
+                user.save(function(error) {
+                  if (error)
+                    saved_user = false;
+                });
+
+                if(saved_user && saved_company){
+                  res.send({success: true, text: "Successfully voted company."})
+                } else {
+                  res.send({success: false, text: "Error saving models in db."});
+                }
+
+              }
+            });
+          }
+        });
+      } else {
+          res.send({success: false, text: "Params error."});
+      }
+
+    });
 
     app.get('/api/companies', function(req, res) {
         Company.find(function(error, companies) {

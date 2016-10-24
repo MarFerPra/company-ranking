@@ -5,22 +5,22 @@ module.exports = React.createClass({
 
   getInitialState: function(){
   return{
-    userName: "",
-    companyName: "",
+    userId: "",
+    companyId: "",
     companyScore: ""
   }
 },
 
     handleChange: function(event){
-      if(event.target.id === 'company-name'){
+      if(event.target.id === 'company-id'){
         this.setState({
-          companyName: event.target.value
+          companyId: event.target.value
         })
       }
 
-      if(event.target.id === 'user-name'){
+      if(event.target.id === 'user-id'){
         this.setState({
-          userName: event.target.value
+          userId: event.target.value
         })
       }
 
@@ -33,18 +33,24 @@ module.exports = React.createClass({
     },
 
     handleSubmit: function(event){
-      if(this.state.companyName && this.state.companyScore && this.state.userName){
+      if(this.state.companyId && this.state.companyScore && this.state.userId){
         $.ajax({
           url: '/api/company/vote',
+          type: 'POST',
           data: {
-            userName: this.state.userName,
-            companyName: this.state.companyName,
-            companyScore: this.state.companyScore
+            user_id: this.state.userId,
+            company_id: this.state.companyId,
+            score: this.state.companyScore
           },
           success: function(response){
+
+            if(response.success){
+              $(document).trigger('update-company-list')
+            }
+
             this.setState({
-              userName: "",
-              companyName: "",
+              userId: "",
+              companyId: "",
               companyScore: ""
             }, this.props.displayMessage(response));
             console.log(response);
@@ -63,18 +69,18 @@ module.exports = React.createClass({
                     <input
                       type="text"
                       className="form-control centered-input"
-                      id="user-name"
-                      placeholder="User name"
-                      value={this.state.userName}
+                      id="user-id"
+                      placeholder="User id"
+                      value={this.state.userId}
                       onChange={this.handleChange}
                       />
 
                       <input type="text"
                         className="form-control centered-input"
-                        id="company-name"
-                        placeholder="Company name"
+                        id="company-id"
+                        placeholder="Company id"
                         onChange={this.handleChange}
-                        value={this.state.companyName}
+                        value={this.state.companyId}
                         />
 
                     <input type="text"
