@@ -21,7 +21,6 @@ module.exports = React.createClass({
           this.setState({
             companies: response
           });
-          console.log(response);
         }.bind(this)
       })
     },

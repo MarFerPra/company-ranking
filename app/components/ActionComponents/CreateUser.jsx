@@ -43,7 +43,6 @@ module.exports = React.createClass({
               userName: "",
               userEmail: ""
             }, this.props.displayMessage(response));
-            console.log(response);
           }.bind(this)
         })
       }

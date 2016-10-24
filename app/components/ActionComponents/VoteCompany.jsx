@@ -53,7 +53,6 @@ module.exports = React.createClass({
               companyId: "",
               companyScore: ""
             }, this.props.displayMessage(response));
-            console.log(response);
           }.bind(this)
         })
       }

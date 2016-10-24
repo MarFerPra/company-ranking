@@ -22,7 +22,6 @@ module.exports = React.createClass({
           this.setState({
             users: response
           });
-          console.log(response);
         }.bind(this)
       })
     },
