@@ -9,6 +9,9 @@ node_js:
     - "4.6.1"
     - "4.0.0"
 sudo: false
+before_script:
+  - npm install -g gulp
+script: gulp
 script:
     - npm test
 after_success:
