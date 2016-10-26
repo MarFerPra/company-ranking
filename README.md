@@ -2,8 +2,11 @@
 
 **Simple Node js app to learn how-to work with CI and TDD.**
 
+![Front page](http://i1268.photobucket.com/albums/jj576/marcofp0/company-ranking_zpsdmtu4pcz.png)
+
 ## Basic functionality:
 
+* Real time updates using React
 * Create company.
 * List company score.
 * Publish score (checking that same user cannot publish more than once per company).
