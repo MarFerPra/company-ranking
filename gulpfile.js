@@ -3,6 +3,15 @@ var browserify = require("browserify");
 var reactify = require("reactify");
 var source = require("vinyl-source-stream");
 
+var docco = require("gulp-docco");
+
+gulp.task("docco", function(){
+  return gulp.src("./src/*.js")
+    .pipe(docco())
+    .pipe(gulp.dest('./documentation-output'))
+
+});
+
 gulp.task("bundle", function () {
     return browserify({
         entries: "./app/components/main.jsx",
