@@ -44,8 +44,6 @@ describe("Routes", function() {
     });
 
     it("Vote a company", function(done) {
-
-        // Creating user.
         var user = new User();
         user.name = 'Test user';
         user.email = 'Test@email.com';
@@ -65,7 +63,6 @@ describe("Routes", function() {
                 assert.notOk(error);
                 var company_test_id = company._id;
 
-                console.log("User id:", user_test_id, company_test_id)
                 var data = {
                     user_id: user_test_id,
                     company_id: company_test_id,
