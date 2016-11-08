@@ -2,7 +2,7 @@
 
 **Simple Node js app to learn how-to work with CI and TDD.**
 
-[Deployed on Heroku](https://company-ranking.herokuapp.com/home) and using mLab for remote mongoDB.
+[Deployed on Heroku](https://company-ranking.herokuapp.com/) and using mLab for remote mongoDB.
 
 ![Front page](http://i1268.photobucket.com/albums/jj576/marcofp0/company-ranking_zpsdmtu4pcz.png)
 
