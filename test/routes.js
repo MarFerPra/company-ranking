@@ -34,14 +34,6 @@ describe("Routes", function() {
         //Use for cleanup
         done();
     });
-    it("Root page", function(done) {
-        request(app).get('/').set('Accept', 'application/json').expect(200).end(function(err, res) {
-            assert.notOk(err);
-            assert.ok(res);
-            assert.strictEqual(res.body, "<h1>Company Ranking API</h1>");
-            done();
-        });
-    });
 
     it("Vote a company", function(done) {
         var user = new User();

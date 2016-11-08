@@ -9,12 +9,8 @@ module.exports = function(app) {
         extended: true
     }));
 
-    app.get('/',function(req,res){ //This is to check that it works, remove if unwanted
-        res.json("<h1>Company Ranking API</h1>");
-    });
-
-    app.get('/home', function(req, res){
-      res.sendFile(__dirname + '/views/home.html');
+    app.get('/',function(req,res){
+        res.sendFile(__dirname + '/views/home.html');
     });
 
     app.use(function(req, res, next) {
