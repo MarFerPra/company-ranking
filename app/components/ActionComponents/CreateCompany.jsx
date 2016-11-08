@@ -34,7 +34,7 @@ module.exports = React.createClass({
             description: this.state.companyDescription
           },
           success: function(response){
-            
+
             if(response.success){
               $(document).trigger('update-company-list')
             }
@@ -43,7 +43,6 @@ module.exports = React.createClass({
               companyName: "",
               companyDescription: ""
             }, this.props.displayMessage(response));
-            console.log(response);
           }.bind(this)
         })
       }

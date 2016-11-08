@@ -31,7 +31,6 @@ module.exports = function(app) {
     });
     app.post('/api/users', function(req, res) {
         var user = new User();
-        //user.id = new mongoose.Types.ObjectId; //Mongoose SHOULD add the id automatically
         user.name = req.body.name;
         user.email = req.body.email;
         user.has_rated = null;
@@ -176,7 +175,6 @@ module.exports = function(app) {
 
     app.post('/api/companies', function(req, res) {
         var company = new Company();
-        //company.id = new mongoose.Types.ObjectId;
         company.name = req.body.name;
         company.description = req.body.description;
         company.total_score = req.body.total_score ? req.body.total_score : 0;
@@ -252,6 +250,6 @@ module.exports = function(app) {
                     });
                 }
             });
-        } //TODO: add else here, return an error code (bad request)
+        }
     });
 };

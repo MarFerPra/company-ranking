@@ -14,7 +14,6 @@ module.exports = React.createClass({
     },
 
     render: function() {
-      console.log("rendering.")
         return (
             <div>
                 <div className="container">
